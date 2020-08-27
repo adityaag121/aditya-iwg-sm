@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<% if(data.loggedIn) {%>
+	<h2>You are logged in as <%= data.user %></h2>
+	<%}else{%>
+	<h2>You are not logged in</h2>
+	<%}%>
+	<ol>
+		<% data.results.forEach(e=>{%>
+	<li><%=e%></li>
+	<%})%>
+	</ol>
+</body>
+
+</html>
